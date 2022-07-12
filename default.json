@@ -8,22 +8,37 @@
     "after 9am every weekday",
     "before 5pm every weekday"
   ],
-  "enabledManagers": ["gradle", "gradle-wrapper", "dockerfile", "docker-compose", "helmv3", "helm-values", "circleci"],
+  "enabledManagers": [
+    "gradle",
+    "gradle-wrapper",
+    "helmv3",
+    "helm-values",
+    "circleci"
+  ],
   "rangeStrategy": "replace",
   "prCreation": "not-pending",
   "rollbackPrs": true,
   "packageRules": [
     {
-      "matchPackagePatterns": [
-        "*"
-      ],
       "matchUpdateTypes": [
-        "minor",
+        "minor"
+      ],
+      "groupName": "all minor dependencies",
+      "groupSlug": "all-minor"
+    },
+    {
+      "matchUpdateTypes": [
         "patch"
       ],
-      "groupName": "all non-major dependencies",
-      "groupSlug": "all-minor-patch"
+      "automerge": true,
+      "groupName": "all patch dependencies",
+      "groupSlug": "all-patch"
     }
   ],
-  "prConcurrentLimit": 1
+  "vulnerabilityAlerts": {
+    "labels": [
+      "security"
+    ]
+  },
+  "rebaseWhen": "behind-base-branch"
 }

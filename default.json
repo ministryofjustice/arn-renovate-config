@@ -9,8 +9,7 @@
     "before 5pm every weekday"
   ],
   "prCreation": "not-pending",
-  "updateNotScheduled": false,
-  "rangeStrategy": "replace",
+  "rangeStrategy": "update-lockfile",
   "rollbackPrs": true,
   "packageRules": [
     {

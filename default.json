@@ -8,8 +8,9 @@
     "after 9am every weekday",
     "before 5pm every weekday"
   ],
-  "rangeStrategy": "replace",
   "prCreation": "not-pending",
+  "updateNotScheduled": false,
+  "rangeStrategy": "replace",
   "rollbackPrs": true,
   "packageRules": [
     {

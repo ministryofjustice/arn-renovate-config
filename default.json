@@ -34,5 +34,8 @@
       "security"
     ]
   },
-  "rebaseWhen": "behind-base-branch"
+  "rebaseWhen": "behind-base-branch",
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }

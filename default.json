@@ -14,18 +14,10 @@
   "packageRules": [
     {
       "matchUpdateTypes": [
-        "minor"
+        "minor", "patch"
       ],
-      "groupName": "all minor dependencies",
-      "groupSlug": "all-minor"
-    },
-    {
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "automerge": true,
-      "groupName": "all patch dependencies",
-      "groupSlug": "all-patch"
+      "groupName": "all non major dependencies",
+      "groupSlug": "all-minor-patch"
     }
   ],
   "vulnerabilityAlerts": {
